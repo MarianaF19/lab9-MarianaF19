@@ -18,3 +18,8 @@ def main():
                 my_aircraft.ascent(feet)
             elif command == 'D':
                 my_aircraft.descent(feet)
+               
+              else:
+            print("Invalid format. Use 'A <feet>' or 'D <feet>'.")
+
+    print(f"Final altitude: {my_aircraft.altitude} feet")
