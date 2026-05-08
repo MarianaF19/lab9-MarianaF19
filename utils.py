@@ -1,4 +1,5 @@
 # utils.py
+
 from person import Person
 from bank_account import BankAccount
 
@@ -28,4 +29,4 @@ def balance_summary(person_list):
         total_balance = 0.0
         for account in person.accounts:
             total_balance += account.balance
-        print(f"{person.name} : {total_balance:.2f}"c)
+        print(f"{person.name} : {total_balance:.2f}")
