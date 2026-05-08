@@ -23,3 +23,6 @@ def main():
             print("Invalid format. Use 'A <feet>' or 'D <feet>'.")
 
     print(f"Final altitude: {my_aircraft.altitude} feet")
+
+if _name_ == "_main_":
+    main()
