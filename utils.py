@@ -30,7 +30,6 @@ def balance_summary(person_list):
         for account in person.accounts:
             total_balance += account.balance
         print(f"{person.name} : {total_balance:.2f}")
-[8:20 p. m., 7/5/2026] Sebas U: person
 
 class Person:
     def _init_(self, name):
