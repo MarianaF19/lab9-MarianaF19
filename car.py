@@ -1,5 +1,4 @@
 # Write your class definition here!
-
 class Car:
     def _init_(self, car_id, brand, year, color, mileage=0.0):
         """Inicializa los atributos del auto."""
