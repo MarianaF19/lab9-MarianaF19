@@ -8,4 +8,13 @@ def main():
         
         parts = user_input.split()
         command = parts[0].upper() 
+        if command == 'X':
+            break
         
+        if len(parts) > 1:
+            feet = int(parts[1])
+            
+         if command == 'A':
+                my_aircraft.ascent(feet)
+            elif command == 'D':
+                my_aircraft.descent(feet)
