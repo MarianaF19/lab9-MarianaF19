@@ -10,6 +10,7 @@ def person_data():
     while not done:
         acc_num = int(input("Enter a 4-digit account number:\n"))
         balance = float(input("Enter the initial balance:\n"))
+        
         nueva_cuenta = BankAccount(acc_num, balance)
         persona.add_account(nueva_cuenta)
         
@@ -18,6 +19,7 @@ def person_data():
             done = True
             
     return persona
+
 def balance_summary(person_list):
     """
     Recibe una lista de objetos Person e imprime el resumen de saldos.
@@ -26,4 +28,4 @@ def balance_summary(person_list):
         total_balance = 0.0
         for account in person.accounts:
             total_balance += account.balance
-        print(f"{person.name} : {total_balance:.2f}")
+        print(f"{person.name} : {total_balance:.2f}"c)
