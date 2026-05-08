@@ -30,3 +30,15 @@ def balance_summary(person_list):
         for account in person.accounts:
             total_balance += account.balance
         print(f"{person.name} : {total_balance:.2f}")
+[8:20 p. m., 7/5/2026] Sebas U: person
+
+class Person:
+    def _init_(self, name):
+        self.name = name
+        self.accounts = []
+
+    def add_account(self, account):
+        self.accounts.append(account)
+
+    def _str_(self):
+        return f"Name = {self.name}, Number of accounts = {len(self.accounts)}"
