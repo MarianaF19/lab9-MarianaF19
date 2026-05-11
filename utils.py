@@ -5,39 +5,24 @@ from bank_account import BankAccount
 
 def person_data():
     name = input("Enter the person's name:\n")
-    persona = Person(name)
+    new_person = Person(name)
     
     done = False
     while not done:
         acc_num = int(input("Enter a 4-digit account number:\n"))
         balance = float(input("Enter the initial balance:\n"))
         
-        nueva_cuenta = BankAccount(acc_num, balance)
-        persona.add_account(nueva_cuenta)
+        # Crear cuenta y agregarla a la persona
+        account = BankAccount(acc_num, balance)
+        new_person.add_account(account)
         
-        respuesta = input("Are you done adding accounts? (yes/no):\n").lower()
-        if respuesta == "yes":
+        choice = input("Are you done adding accounts? (yes/no):\n").lower()
+        if choice == "yes":
             done = True
             
-    return persona
+    return new_person
 
 def balance_summary(person_list):
-    """
-    Recibe una lista de objetos Person e imprime el resumen de saldos.
-    """
     for person in person_list:
-        total_balance = 0.0
-        for account in person.accounts:
-            total_balance += account.balance
+        total_balance = sum(acc.balance for acc in person.accounts)
         print(f"{person.name} : {total_balance:.2f}")
-
-class Person:
-    def _init_(self, name):
-        self.name = name
-        self.accounts = []
-
-    def add_account(self, account):
-        self.accounts.append(account)
-
-    def _str_(self):
-        return f"Name = {self.name}, Number of accounts = {len(self.accounts)}"
