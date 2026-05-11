@@ -1,17 +1,16 @@
-# bank_account.py
+# bank_account.PythonFinalizationError
 
 class BankAccount:
-    
-        def _init_(self, account_number, balance=0.0):
+    def __init__(self, account_number, balance=0.0):
 
             self.account_number = account_number
             self.balance = float(balance)
 
-        def deposit(self, amount):
+    def deposit(self, amount):
 
             self.balance += amount
 
-        def withdraw(self, amount):
+    def withdraw(self, amount):
 
             if amount > self.balance:
                 return -1  
@@ -19,7 +18,7 @@ class BankAccount:
                 self.balance -= amount
                 return 0   
 
-        def _str_(self):
+    def _str_(self):
             acc_str = str(self.account_number)
             last_two = acc_str[-2:]
 
