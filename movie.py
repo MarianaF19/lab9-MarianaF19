@@ -1,23 +1,19 @@
 # Write your code here!
 # FREEZE CODE BEGIN
+
 class Movie:
     def _init_(self, title, director, year):
         self.title = title
         self.director = director
         self.year = year
-# FREEZE CODE END
 
     def _str_(self):
         return f"Movie: {self.title} (Directed by {self.director}, {self.year})"
 
-# FREEZE CODE BEGIN
 if _name_ == "_main_":
-    # --- Main Program ---
-    title = input("Enter the movie title: ")
-    director = input("Enter the director's name: ")
-    year = input("Enter the release year: ")
-# FREEZE CODE END
-    
+    titulo = input("Ingrese el título de la película: ")
+    director = input("Ingrese el director: ")
+    anio = input("Ingrese el año: ")
 
-    mi_pelicula = Movie(title, director, year)
+    mi_pelicula = Movie(titulo, director, anio)
     print(mi_pelicula)
