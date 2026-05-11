@@ -1,7 +1,5 @@
 from aircraft import Aircraft
 
-from aircraft import Aircraft
-
 def main():
     model = input("Enter aircraft model: ")
     my_aircraft = Aircraft(model)
@@ -27,5 +25,5 @@ def main():
 
     print(f"Final altitude: {my_aircraft.altitude} feet")
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     main()
