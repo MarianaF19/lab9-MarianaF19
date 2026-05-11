@@ -1,5 +1,5 @@
 class Book:
-    def __init__(self, title, author, year):
+    def _init_(self, title, author, year):
         self._title = title  # Use _ to indicate private attribute
         self._author = author
         self._year = year
@@ -15,5 +15,5 @@ class Book:
         else:
             print("Title is too short!")
 
-    def __str__(self):
+    def _str_(self):
         return f"'{self._title}' by {self._author} ({self._year})"
